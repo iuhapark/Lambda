@@ -1,29 +1,38 @@
 package com.dennis.api.user;
 
+import com.dennis.api.enums.Navigation;
+import com.dennis.api.enums.UserRouter;
+
 import java.sql.SQLException;
 import java.util.Scanner;
 
 public class UserView {
     public static void main(Scanner sc) throws SQLException {
         UserController ctrl = new UserController();
-        String msg = ctrl.addUsers();
+//        execute(sc, ctrl);
+        UserRouter.execute(sc);
 
+    }
+
+    private static void execute(Scanner sc, UserController ctrl) throws SQLException {
+        String msg = ctrl.addUsers();
         while(true){
             System.out.println("x.Exit\n" +
-                    "1.Sign up\n" +
-                    "2.Sigh in\n" +
-                    "3.Search ID\n" +
-                    "4.Update password\n" +
-                    "5.Delete account\n" +
+                    "su.Sign up\n" +
+                    "si.Sigh in\n" +
+                    "fu.Search username\n" +
+                    "u.Update password\n" +
+                    "d.Delete account\n" +
                     "ls.User list\n" +
-                    "7.Search name\n" +
-                    "8.Search job\n" +
-                    "9.Number of users\n" +
+                    "fn.Search name\n" +
+                    "fj.Search job\n" +
+                    "n.Number of users\n" +
                     "touch.Create table\n" +
                     "rm.Delete table");
             switch (sc.next()){
                 case "0":
-                    System.out.println("Exit");return;
+                    System.out.println("Exit");
+                    return;
                 case "1":
                     System.out.println("1.Sign up");
                     msg = ctrl.save(sc);

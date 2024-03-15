@@ -1,18 +1,15 @@
 package com.dennis.api.post;
 
-import java.util.List;
-
 public class PostController {
+
+    private final static PostController instance = new PostController();
+
+    private PostController() {
+        service = PostServiceImpl.getInstance();
+    }
+
+    public static PostController getInstance() {
+        return instance;
+    }
     private PostServiceImpl service;
-
-    public PostController(){
-        this.service = PostServiceImpl.getInstance();
-    }
-
-    public List<?> findAll() {
-        return service.findAll();
-    }
-
-
 }
-

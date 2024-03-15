@@ -1,9 +1,6 @@
 package com.dennis.api.enums;
 
-import com.dennis.api.account.AccountVIew;
-import com.dennis.api.board.BoardVIew;
 import com.dennis.api.crawler.CrawlerVIew;
-import com.dennis.api.post.PostVIew;
 import com.dennis.api.user.UserView;
 
 import java.io.IOException;
@@ -31,17 +28,17 @@ public enum NavigationOfPredicate {
     }),
     a("a", i -> {
         System.out.println("Post");
-        PostVIew.main(i);
+//        PostVIew.main(i);
         return true;
     }),
     b("b", i -> {
         System.out.println("Board");
-        BoardVIew.main(i);
+//        BoardVIew.main(i);
         return true;
     }),
     ac("ac", i -> {
         System.out.println("Account");
-        AccountVIew.main(i);
+//        AccountVIew.main(i);
         return true;
     }),
     c("c", i -> {
