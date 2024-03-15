@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.function.Predicate;
 
 public enum UserRouter {
-    ;
+    EXIT("0", sc -> false);
 
     private final String name;
     private final Predicate<Scanner> predicate;

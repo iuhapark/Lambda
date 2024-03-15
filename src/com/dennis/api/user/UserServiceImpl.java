@@ -18,6 +18,7 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
         this.repo = UserRepository.getInstance();
         this.users = new HashMap<>();
     }
+
     public static UserServiceImpl getInstance() {
         return instance;
     }
@@ -37,6 +38,7 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
         users = map;
         return "addusers 결과 : " + users + "개 더미값 추가";
     }
+
     @Override
     public User findUserById(Scanner sc) {
         System.out.println("찾을 계정의 아이디를 입력하세요.");
@@ -49,6 +51,7 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
         }
         return user;
     }
+
     @Override
     public Messenger save(User user) {
         users.put(user.getUsername(), user);
@@ -71,7 +74,7 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
 
     @Override
     public String count() {
-        return users.size()+"";
+        return users.size() + "";
     }
 
     @Override

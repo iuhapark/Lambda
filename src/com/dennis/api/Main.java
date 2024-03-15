@@ -17,7 +17,7 @@ public class Main {
 
         //Scanner input = new Scanner(System.in);
         // while (NavigationOfPredicate.select(input)) ;
-       // while(NavigationOfFunction.select(input).equals("x"));
-        //while(NavigationOfSuplier.select(input).equals("x"));
+        // while(NavigationOfFunction.select(input).equals("x"));
+        //while(NavigationOfSupplier.select(input).equals("x"));
     }
 }

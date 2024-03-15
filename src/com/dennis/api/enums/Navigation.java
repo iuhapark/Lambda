@@ -23,7 +23,6 @@ public enum Navigation {
         this.predicate = predicate;
     }
 
-
     public static void execute(Scanner sc) {
         System.out.println();
 

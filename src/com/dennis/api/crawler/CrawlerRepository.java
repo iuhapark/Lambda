@@ -14,11 +14,14 @@ import java.util.Map;
 public class CrawlerRepository extends AbstractRepository {
     public static CrawlerRepository instance = new CrawlerRepository();
     private Map<String, ?> map;
+
     private CrawlerRepository() {
         map = new HashMap<>();
     }
 
-    public static CrawlerRepository getInstance(){return instance;}
+    public static CrawlerRepository getInstance() {
+        return instance;
+    }
 
     @Override
     public Map<String, ?> save(Map<String, ?> paraMap) throws IOException {
@@ -49,7 +52,6 @@ public class CrawlerRepository extends AbstractRepository {
         map = localMap;
         return map;
     }
-
 
 
 }

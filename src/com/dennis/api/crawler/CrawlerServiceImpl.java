@@ -6,12 +6,15 @@ import java.util.Map;
 public class CrawlerServiceImpl implements CrawlerService {
     private static CrawlerServiceImpl instance = new CrawlerServiceImpl();
     private CrawlerRepository repository;
-    private CrawlerServiceImpl(){
+
+    private CrawlerServiceImpl() {
         repository = CrawlerRepository.getInstance();
     }
+
     static CrawlerServiceImpl getInstance() {
         return instance;
     }
+
     @Override
     public Map<String, ?> finNamesFromWeb(Map<String, String> paraMap) throws IOException {
         return repository.save(paraMap);

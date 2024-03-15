@@ -15,19 +15,20 @@ public class CrawlerVIew {
         Iterator<Element> title;
         Map<String, ?> map;
 
-        while(true){
+        while (true) {
             System.out.println("x.Exit b.Bugs! m.Melon");
-            switch (sc.next()){
+            switch (sc.next()) {
                 case "x":
-                    System.out.println("종료");return;
+                    System.out.println("종료");
+                    return;
                 case "b":
                     System.out.println("1-벅스");
-                  map = controller.findBugsMusic(sc);
-                  rank = (Iterator<Element>) map.get("rank");
-                  artist = (Iterator<Element>) map.get("artist");
-                  title = (Iterator<Element>) map.get("title");
+                    map = controller.findBugsMusic(sc);
+                    rank = (Iterator<Element>) map.get("rank");
+                    artist = (Iterator<Element>) map.get("artist");
+                    title = (Iterator<Element>) map.get("title");
                     System.out.println("벅스 결과: ");
-                    while(rank.hasNext()){
+                    while (rank.hasNext()) {
                         System.out.println(rank.next().text() + "위 " + artist.next().text() + " - " + title.next().text());
                     }
                     break;
@@ -38,7 +39,7 @@ public class CrawlerVIew {
                     artist = (Iterator<Element>) map.get("artist");
                     title = (Iterator<Element>) map.get("title");
                     System.out.println("멜론 결과: ");
-                    while(rank.hasNext()){
+                    while (rank.hasNext()) {
                         System.out.println(rank.next().text() + "위 " + artist.next().text() + " - " + title.next().text());
                     }
                     break;

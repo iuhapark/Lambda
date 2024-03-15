@@ -8,10 +8,12 @@ public class Inventory<T> {
     public Inventory(ArrayList<T> inventory) {
         this.inventory = new ArrayList<>();
     }
-    public void add(T t){
+
+    public void add(T t) {
         inventory.add(t);
     }
-    public T remove(int index){
+
+    public T remove(int index) {
         return inventory.remove(index);
     }
 
@@ -23,7 +25,7 @@ public class Inventory<T> {
         return inventory.get(index);
     }
 
-    public void clear(){
+    public void clear() {
         inventory.clear();
     }
 

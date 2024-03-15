@@ -59,6 +59,7 @@ public enum NavigationOfPredicate {
         this.menu = menu;
         this.predicate = predicate;
     }
+
     public static Boolean navigate(Scanner sc) {
         System.out.println("x-Exit " +
                 "u.User " +

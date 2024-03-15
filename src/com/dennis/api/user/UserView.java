@@ -16,7 +16,7 @@ public class UserView {
 
     private static void execute(Scanner sc, UserController ctrl) throws SQLException {
         String msg = ctrl.addUsers();
-        while(true){
+        while (true) {
             System.out.println("x.Exit\n" +
                     "su.Sign up\n" +
                     "si.Sigh in\n" +
@@ -29,14 +29,14 @@ public class UserView {
                     "n.Number of users\n" +
                     "touch.Create table\n" +
                     "rm.Delete table");
-            switch (sc.next()){
+            switch (sc.next()) {
                 case "0":
                     System.out.println("Exit");
                     return;
                 case "1":
                     System.out.println("1.Sign up");
                     msg = ctrl.save(sc);
-                    System.out.println("Signing up "+msg);
+                    System.out.println("Signing up " + msg);
                     break;
                 case "2":
                     System.out.println("2.Sigh in");
@@ -67,7 +67,7 @@ public class UserView {
                 case "9":
                     System.out.println("9.Number of users");
                     String numberOfUsers = ctrl.count();
-                    System.out.println("Number of users:  "+numberOfUsers);
+                    System.out.println("Number of users:  " + numberOfUsers);
                     break;
                 case "touch":
                     System.out.println("touch.Create table");

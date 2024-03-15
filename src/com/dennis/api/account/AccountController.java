@@ -4,7 +4,7 @@ public class AccountController {
     private final static AccountController instance = new AccountController();
 
     private AccountController() {
-    service = AccountServiceImpl.getInstance();
+        service = AccountServiceImpl.getInstance();
     }
 
     public static AccountController getInstance() {

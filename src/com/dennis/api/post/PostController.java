@@ -11,5 +11,6 @@ public class PostController {
     public static PostController getInstance() {
         return instance;
     }
+
     private PostServiceImpl service;
 }

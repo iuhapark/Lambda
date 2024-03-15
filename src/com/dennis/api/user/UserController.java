@@ -17,12 +17,15 @@ public class UserController {
 
     UserServiceImpl user;
     UserRepository repo;
-    UserController(){
+
+    UserController() {
         this.user = UserServiceImpl.getInstance();
         this.repo = UserRepository.getInstance();
     }
 
-    public List<?> findUsers() throws SQLException {return repo.findUsers();}
+    public List<?> findUsers() throws SQLException {
+        return repo.findUsers();
+    }
 
 
     public String save(Scanner sc) {
@@ -37,7 +40,7 @@ public class UserController {
                 .height(sc.nextDouble())
                 .weight(sc.nextDouble())
                 .build());
-        return "Thanks for signing up. Your account has been created." ;
+        return "Thanks for signing up. Your account has been created.";
     }
 
     public String addUsers() {
@@ -76,7 +79,8 @@ public class UserController {
         return "계정이 삭제되었습니다.";
     }
 
-    public Optional<User> getOne(Scanner sc) {return user.getOne(sc.next());
+    public Optional<User> getOne(Scanner sc) {
+        return user.getOne(sc.next());
     }
 
     public Messenger createTable() throws SQLException {

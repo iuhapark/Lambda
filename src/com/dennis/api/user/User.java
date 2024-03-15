@@ -16,6 +16,7 @@ public class User {
     private String job;
     private double height;
     private double weight;
+
     @Builder(builderMethodName = "builder")
 
     public User(String username, String password, String name, String phoneNumber, String addressId, String job, double height, double weight) {

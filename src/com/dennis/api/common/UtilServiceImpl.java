@@ -2,45 +2,53 @@ package com.dennis.api.common;
 
 public class UtilServiceImpl implements UtilService {
     private static UtilServiceImpl instance = new UtilServiceImpl();
-    private UtilServiceImpl(){}
-    public static UtilServiceImpl getInstance(){
+
+    private UtilServiceImpl() {
+    }
+
+    public static UtilServiceImpl getInstance() {
         return instance;
     }
+
     @Override
-    public int createRandomInteger(int start, int gapBetweenStartAndEnd){
+    public int createRandomInteger(int start, int gapBetweenStartAndEnd) {
         //0이상 50 미만의 값을 생성하고 150을 더해줌으로써 키의 범위를 150이상 200미만으로 만듦
-        return start + (int)(Math.random()*gapBetweenStartAndEnd);
+        return start + (int) (Math.random() * gapBetweenStartAndEnd);
     }
 
     @Override
     public double createRandomDouble(int start, int gapBetweenStartAndEnd) {
         return start + Math.round(
-                (int)(Math.random() * gapBetweenStartAndEnd) * 10 ) / 10.0;
+                (int) (Math.random() * gapBetweenStartAndEnd) * 10) / 10.0;
     }
+
     @Override
     public String createRandomUsername() {
         String username = "";
-        for(; username.length() < 5; username += String.valueOf((char)('a' + this.createRandomInteger(0, 26))));
+        for (; username.length() < 5; username += String.valueOf((char) ('a' + this.createRandomInteger(0, 26)))) ;
         //아스키코드 97+0 =a
         return username;
     }
+
     @Override
-    public String createRandomName(){
+    public String createRandomName() {
         String[] name = {"이정재", "마동석", "송강호", "윤여정", "황정민",
                 "정우성", "이병헌", "현 빈", "유해진", "손석구",
                 "전도연", "손예진", "하지원", "김하늘", "송중기",
                 "하정우", "장동건", "원 빈", "박해일", "소지섭", "김혜수"};
-        return name[createRandomInteger(0,20)];
+        return name[createRandomInteger(0, 20)];
     }
+
     @Override
-    public String createRandomTitle(){
-        String[] titles = {"대통령은 국가의 원수","모든 국민","정당은 법률",
-                "대통령은 내우","국교의 인정","국가안전보장회의","국회는 상호원조",
-                "국회의원과 정부","대통령은 제3항","대통령이 궐위"};
-        return titles[createRandomInteger(0,10)];
+    public String createRandomTitle() {
+        String[] titles = {"대통령은 국가의 원수", "모든 국민", "정당은 법률",
+                "대통령은 내우", "국교의 인정", "국가안전보장회의", "국회는 상호원조",
+                "국회의원과 정부", "대통령은 제3항", "대통령이 궐위"};
+        return titles[createRandomInteger(0, 10)];
     }
+
     @Override
-    public String createRandomContent(){
+    public String createRandomContent() {
         String[] content = {
                 "대통령은 국가의 원수이며, 외국에 대하여 국가를 대표한다. 전직대통령의 신분과 예우에 관하여는 법률로 정한다.",
                 "모든 국민은 거주·이전의 자유를 가진다. 공무원의 신분과 정치적 중립성은 법률이 정하는 바에 의하여 보장된다.",
@@ -53,11 +61,11 @@ public class UtilServiceImpl implements UtilService {
                 "대통령은 제3항과 제4항의 사유를 지체없이 공포하여야 한다.",
                 "대통령이 궐위되거나 사고로 인하여 직무를 수행할 수 없을 때에는 국무총리, 법률이 정한 국무위원의 순서로 그 권한을 대행한다.",
         };
-        return content[createRandomInteger(0,13)];
+        return content[createRandomInteger(0, 13)];
     }
 
-    public String createRandomCompany(){
-        String[] companies = {"구글","엔비디아","메타","삼성","LG","애플"};
+    public String createRandomCompany() {
+        String[] companies = {"구글", "엔비디아", "메타", "삼성", "LG", "애플"};
         return null;
     }
 }

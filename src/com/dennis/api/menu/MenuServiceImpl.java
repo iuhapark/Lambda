@@ -7,13 +7,12 @@ public class MenuServiceImpl implements MenuService {
     private MenuServiceImpl() {
         repo = MenuRepository.getInstance();
     }
+
     public static MenuServiceImpl getInstance() {
         return instance;
     }
 
     private MenuRepository repo;
-
-
 
 
 }

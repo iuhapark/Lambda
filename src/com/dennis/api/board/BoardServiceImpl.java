@@ -10,5 +10,6 @@ public class BoardServiceImpl {
     public static BoardServiceImpl getInstance() {
         return instance;
     }
+
     private BoardRepository repo;
 }

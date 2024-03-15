@@ -2,11 +2,12 @@ package com.dennis.api.strategy;
 
 import java.util.Scanner;
 
-public class Weekend { public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    String har = WeekendStrategy.foo(sc);
-    System.out.println("전략의 결과: "+ har);
-}
+public class Weekend {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String har = WeekendStrategy.foo(sc);
+        System.out.println("전략의 결과: " + har);
+    }
 
     private static void foo(String day) {
         System.out.println("1~7 입력: ");

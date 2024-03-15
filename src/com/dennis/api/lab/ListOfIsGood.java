@@ -4,27 +4,27 @@ import java.util.*;
 import java.util.stream.Stream;
 
 /**
- Primitive 타입의 경우에 다른 결과를 보입니다.
- Stream.of 는 Stream<int[]>
- Arrays.stream 은 IntStream 을 반환합니다.
- * */
+ * Primitive 타입의 경우에 다른 결과를 보입니다.
+ * Stream.of 는 Stream<int[]>
+ * Arrays.stream 은 IntStream 을 반환합니다.
+ */
 public class ListOfIsGood {
     public static void main(String... args) {
         // stream() - - String[]
-        String[] arr = {"foo","bar","baz","qux"};
+        String[] arr = {"foo", "bar", "baz", "qux"};
         Arrays.stream(arr)
                 .forEach(str -> System.out.print(str + " "));
         System.out.println();
         // stream() - - int[]
-        int intArr[] = { 1, 2, 3, 4, 5 };
+        int intArr[] = {1, 2, 3, 4, 5};
         Arrays.stream(intArr).forEach(str -> System.out.print(str + " "));
         System.out.println();
         // of() - String
-        Stream.of( "foo","bar","baz","qux")
+        Stream.of("foo", "bar", "baz", "qux")
                 .forEach(str -> System.out.print(str + " "));
         System.out.println();
         // of() - int
-        Stream.of(6,7,8,9,10)
+        Stream.of(6, 7, 8, 9, 10)
                 .forEach(str -> System.out.print(str + " "));
         System.out.println();
 

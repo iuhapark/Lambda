@@ -10,5 +10,6 @@ public class PostServiceImpl {
     public static PostServiceImpl getInstance() {
         return instance;
     }
+
     private PostRepository repo;
 }

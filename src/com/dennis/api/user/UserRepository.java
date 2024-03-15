@@ -19,14 +19,19 @@ public class UserRepository {
     }
 
     private Connection connection;
-    public static UserRepository getInstance(){return instance;}
+
+    public static UserRepository getInstance() {
+        return instance;
+    }
+
     public UserRepository() throws SQLException {
         connection = DriverManager.getConnection( // 다른 메소드에 있는 것을 연결할 때는 상단으로 빼준다.
                 "jdbc:mysql://localhost:3306/dennisdb",
                 "root",
                 "rootroot");
     }
-    public String test(){
+
+    public String test() {
         return "UserRepositoy connected.";
     }
 
@@ -67,7 +72,7 @@ public class UserRepository {
                 "  CONSTRAINT user_pk PRIMARY KEY(id)\n" +
                 ");";
         pstmt = connection.prepareStatement(sql);
-        return (pstmt.executeUpdate() == 0) ? Messenger.SUCCESS: Messenger.FAIL;
+        return (pstmt.executeUpdate() == 0) ? Messenger.SUCCESS : Messenger.FAIL;
     }
 
     public String deleteTable() throws SQLException {
