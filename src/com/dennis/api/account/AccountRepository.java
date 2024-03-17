@@ -9,6 +9,4 @@ public class AccountRepository {
     public static AccountRepository getInstance() {
         return instance;
     }
-
-
 }
