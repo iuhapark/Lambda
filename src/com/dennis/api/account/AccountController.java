@@ -2,21 +2,13 @@ package com.dennis.api.account;
 
 import com.dennis.api.enums.Messenger;
 
-import java.time.LocalDate;
 import java.util.Scanner;
 
 public class AccountController {
     AccountServiceImpl account;
-    LocalDate localDate;
+    public AccountController(){
+        this.account = AccountServiceImpl.getInstance(); }
 
-    private final static AccountController instance = new AccountController();
-
-    private AccountController() {
-    }
-
-    public static AccountController getInstance() {
-        return instance;
-    }
     public Messenger createAccount(Scanner sc){
         return account.save(Account.builder()
                 .accountNumber(sc.next())
@@ -54,5 +46,4 @@ public class AccountController {
     public String delete(Scanner sc) {
         return account.delete(Account.builder().accountNumber(sc.next()).build());
     }
-}
 }
