@@ -10,6 +10,6 @@ public class AccountView {
         AccountController accountController = new AccountController();
         AccountRouter.execute(sc);
 
-        while (AccountRouter.accountRoute(sc));
+//        while (AccountRouter.accountRoute(sc));
         }
     }

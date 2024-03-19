@@ -11,7 +11,7 @@ public class AccountController {
 
     private final static AccountController instance = new AccountController();
 
-    private AccountController() {
+    AccountController() {
     }
 
     public static AccountController getInstance() {
@@ -54,5 +54,4 @@ public class AccountController {
     public String delete(Scanner sc) {
         return account.delete(Account.builder().accountNumber(sc.next()).build());
     }
-}
 }
