@@ -11,7 +11,7 @@ public class AccountController {
 
     private final static AccountController instance = new AccountController();
 
-    private AccountController() {
+    AccountController() {
     }
 
     public static AccountController getInstance() {
